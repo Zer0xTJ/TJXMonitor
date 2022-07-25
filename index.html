@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="TJXMonitor | Simple free  employees screen monitor">
+    <meta name="description"
+        content="TJXMonitor is a free / open-source simple employees screens monitor app, (made with electron) and it runs on LAN (Local Area Network). It consists of 2 apps (Admin, Client).">
+    <meta name="keywords"
+        content="monitor, screen, display, employees, شاشة, مراقبة, تتبع, شركة, اجهزة, device, free, open, source">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="SoloTJX">
+    <script src="./js/tailwind.js"></script>
+    <script src="./js/jq.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": '#7f9975',
+                        "secondary": '#556a4d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>TJXMonitor | Free & Simple Employees Screen Monitor</title>
+</head>
+
+<body>
+    <nav>
+        <!-- left div -->
+        <div class="flex flex-1 items-center uppercase ">
+            <h1 class="mx-2 text-3xl font-bold text-white">TJX Monitor</h1>
+            <a class="mx-2 text-white p-2 font-weight hover:bg-white hover:text-black" href="#about">
+                <i class="bi bi-house-fill">&nbsp;</i>
+                about
+            </a>
+            <a class="mx-2 text-white p-2 font-weight hover:bg-white hover:text-black" href="#usage">
+                <i class="bi bi-gear-wide-connected">&nbsp</i>
+                Usage
+            </a>
+            <a class="mx-2 text-white p-2 font-weight hover:bg-white hover:text-black"
+                href="https://github.com/solotjx/TJXMonitor" target="_blank">
+                <i class="bi bi-github">&nbsp</i>
+                Source code
+            </a>
+        </div>
+        <!-- right div -->
+        <div>
+            <a class="bg-primary p-2 font-weight hover:bg-secondary" href="#download">
+                <i class="bi bi-download">&nbsp</i>
+                Download
+            </a>
+            <span>&nbsp;</span>
+            <a class="bg-red-500 p-2 font-weight hover:bg-red-800" href="https://www.buymeacoffee.com/solo.tjx"
+                target="_blank">
+                <i class="bi bi-cup-hot-fill">&nbsp</i>
+                Donate
+            </a>
+        </div>
+    </nav>
+    <center>
+        <section id="header-cont">
+            <h1 class="text-5xl"> Simple, And Free!</h1>
+            <br />
+            <img src="imgs/header.png" id="header-img" />
+        </section>
+    </center>
+
+    <section id="about" class="mx-20 px-20 py-10">
+        <h2 class="border-l-8 text-3xl px-5 font-bold border-primary mt-20">About TJXMonitor</h2>
+        <p class="my-2">
+            <b>TJXMonitor</b> is a <b>free / open-source</b> simple employees screens monitor app, (made with electron)
+            and it runs on LAN
+            (Local Area Network).
+            It
+            consists
+            of 2
+            apps (Admin,
+            Client).
+            <br />
+            <br />
+            <b>Admin :</b> The App that will display employees screens.
+            <br />
+            <b>Client : </b> An App that runs in background to send screen frames to the admin app.
+        </p>
+    </section>
+
+
+    <section id="usage" class="mx-20 px-20 py-10">
+        <h2 class="border-l-8 text-3xl px-5 font-bold border-primary">TJXMonitor Usage</h2>
+        <h4 class="border-l-8 text-1xl px-5 font-bold border-secondary ml-10 mt-5"># Admin Usage</h4>
+        <p class="my-2 mx-10">
+            <b>TJXMonitor</b> App uses <b>PORT 9999</b>, so you need to <b>ALLOW</b> this port in your firewall.
+            <br />
+            Open <b>TJXMonitor Admin</b> after The installation process, and every connected device will be displayed on
+            the app screen, thats it.
+            <br>
+        </p>
+        <h4 class="border-l-8 text-1xl px-5 font-bold border-secondary ml-10 mt-5"># Client Usage</h4>
+        <p class="my-2 mx-10">
+            <b>Client</b> app usage is a little bit tricky, and I will try to explain the steps, as easy as I can.
+        </p>
+        <ol class="ml-20 list-decimal">
+            <li>Install Client App.</li>
+            <li>Now you need to configure the connection parameters.</li>
+            <li>Go to installation path, and create a new file named <b>"config.txt"</b></li>
+            <li>
+                <b>"config.txt"</b> content:
+                <br />
+                <div class="file-content">
+                    IP=192.168.1.x:9999<br />
+                    clientName=TJX-Client<br />
+                    sizePercentage=40<br />
+                    intervalTime=500<br />
+                </div>
+                <br />
+                <b>IP : </b> Admin device local IP, insure to set the port to 9999.
+                <br />
+                <b>clientName : </b> The client name that will be displayed in admin screen below the screen frames.
+                <br />
+                <b>sizePercentage : </b> TJXMonitor uses 1920x1080 as a base screen size, you can set the percentage to
+                60, and
+                it will take 60% of 1920x1080.
+                <br />
+                <b>intervalTime : </b> this value in (milleseconds), it's the delay value between frames to send.
+            </li>
+            <li>After configuration step, you can <b>run and add it to startup applications</b>, and it will auto
+                connect to
+                admin device to send screen frames.</li>
+        </ol>
+    </section>
+
+    <section id="download" class="mx-20 px-20 py-10">
+        <h2 class="border-l-8 text-3xl px-5 font-bold border-primary">Download TJXMonitor For Free</h2>
+        <p class="my-2">
+            <b>TJXMonitor</b> is a <b>free / open-source.</b>
+            <br />
+            <br />
+            <a class="p-2 font-weight bg-blue-800 text-white hover:bg-blue-500 hover:text-white"
+                href="TJXMonitor-Admin-Setup.exe">
+                DOWNLOAD-ADMIN
+            </a>
+            <span>&nbsp;</span>
+            <a class="p-2 font-weight bg-blue-800 text-white hover:bg-blue-500 hover:text-white"
+                href="TJXMonitor-Client-Setup.exe">
+                DOWNLOAD-CLIENT
+            </a>
+        </p>
+    </section>
+    <section id="footer" class="bg-black text-white p-5">
+        <center>
+            <a href="https://twitter.com/solotjx" target="_blank">@solotjx</a> - 2022 &copy;
+            <span> | </span>
+            <a href="https://www.buymeacoffee.com/solo.tjx" target="_blank">
+                <i class="bi bi-cup-hot-fill">&nbsp</i>
+                Donate SoloTJX
+            </a>
+        </center>
+    </section>
+</body>
+
+</html>

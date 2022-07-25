@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jq.js"></script>
+    <script src="./js/app.js"></script>
+    <title>Monitor</title>
+</head>
+
+<body>
+    <br />
+    <br />
+    <br />
+    <center>
+        <h1>
+            <span>TJX Monitor Connector (Client)</span>
+            <span id="connected">[connected]</span>
+            <span id="disconnected">[closed]</span>
+        </h1>
+        <br />
+        <input id="ip" value="localhost:8080" />
+        <br />
+        <br />
+        <input id="name" value="Client" />
+        <br />
+        <input id="autoconnect" type="checkbox" /> Auto Connect
+        <br />
+        <button onclick="ConnectToWS()">connect</button>
+        <br />
+        <br />
+        <img id='screenshot-image' style="width: 80%; height: auto" />
+    </center>
+</body>
+
+
+</html>
