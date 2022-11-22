@@ -13,7 +13,7 @@
 
 
 # Learn About TJXMonitor
-website: https://solotjx.github.io/TJXMonitor/
+website: https://zer0xtj.github.io/TJXMonitor/
 
 # Buy me a coffee
 donation: https://www.buymeacoffee.com/solo.tjx
